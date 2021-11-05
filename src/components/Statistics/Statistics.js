@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Statistics.module.css";
+import GenerateColor from "./GenerateColor";
 
 function Statistics({ title, stats }) {
   return (
@@ -9,7 +10,11 @@ function Statistics({ title, stats }) {
 
       <ul className={styles.statList}>
         {stats.map((stat) => (
-          <li className={styles.item} key={stat.id}>
+          <li
+            className={styles.item}
+            key={stat.id}
+            style={{ backgroundColor: GenerateColor() }}
+          >
             <span className={styles.label}>{stat.label}</span>
             <span className={styles.percentage}>{stat.percentage}%</span>
           </li>

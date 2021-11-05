@@ -22,16 +22,6 @@
   margin: 10px;
 }
 
-.online {
-  composes: status;
-  background-color: green;
-}
-
-.offline {
-  composes: status;
-  background-color: red;
-}
-
 .avatar {
   border-radius: 5px;
   margin: 5px;
