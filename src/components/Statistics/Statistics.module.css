@@ -14,7 +14,7 @@
   background: #fff;
 }
 
-.title {
+.statTitle {
   font-size: 16px;
   text-transform: uppercase;
   color: rgb(71, 89, 101);
@@ -30,13 +30,13 @@
   background: cornflowerblue;
 }
 
-.label {
+.statLabel {
   font-size: 12px;
   color: rgb(255, 255, 255);
   line-height: 1.667;
 }
 
-.percentage {
+.statPercentage {
   font-size: 18px;
   color: rgb(255, 255, 255);
   line-height: 1.111;

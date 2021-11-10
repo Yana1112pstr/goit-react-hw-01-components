@@ -1,22 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./Statistics.module.css";
-import GenerateColor from "./GenerateColor";
+import s from "./Statistics.module.css";
+import GenerateColor from "../helpers/GenerateColor";
 
 function Statistics({ title, stats }) {
+  const { statistics, statTitle, statList, item, statLabel, statPercentage } =
+    s;
   return (
-    <section className={styles.statistics}>
-      <h2 className={styles.title}>{title}</h2>
+    <section className={statistics}>
+      <h2 className={statTitle}>{title}</h2>
 
-      <ul className={styles.statList}>
-        {stats.map((stat) => (
+      <ul className={statList}>
+        {stats.map(({ id, label, percentage }) => (
           <li
-            className={styles.item}
-            key={stat.id}
+            className={item}
+            key={id}
             style={{ backgroundColor: GenerateColor() }}
           >
-            <span className={styles.label}>{stat.label}</span>
-            <span className={styles.percentage}>{stat.percentage}%</span>
+            <span className={statLabel}>{label}</span>
+            <span className={statPercentage}>{percentage}%</span>
           </li>
         ))}
       </ul>
@@ -25,6 +27,7 @@ function Statistics({ title, stats }) {
 }
 
 Statistics.defaultProps = {
+  title: "statistic",
   percentage: 0,
 };
 
