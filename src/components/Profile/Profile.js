@@ -2,15 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Profile.module.css";
 
-function Profile({ user }) {
-  const {
-    name,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  } = user;
-
+function Profile({
+  name,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) {
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
